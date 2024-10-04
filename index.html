@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- La raiz de nuestra estructura HTML -->
+<html lang="es">
+  <!-- Informacion técnica para el navegador -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <!-- Contenido de nuestra pagina -->
+  <body>
+    <!-- Delimita la seccion del encabezado de nuestra pagina -->
+    <header>
+      <!-- h1: etiqueta para textos que representan titulos -->
+      <h1>Julia Espinoza</h1>
+      <img
+        src="./public/persona.png"
+        id="imagen_logo"
+        class="imagen_logo"
+        alt=""
+      />
+      <!-- nav: delimita una section de navegacion -->
+      <nav>
+        <!-- a: para crear links -->
+        <a href="#" class="active">Sobre mí</a>
+        <!-- /: posicion en el carpeta principal de mi proyecto (Ruta absoluta)
+         --- ./: posicion en el carpeta en el que se encuentra mi archivo.
+         ---     Archivo actual: index.html (Ruta relativa a mi proyecto dentro
+         ---     de la carpeta portafolio)
+         --- ../: posicion de un nivel arriva del carpeta actual (Ruta relativa
+         ---      al proyecto)-->
+        <a href="./paginas/habilidades.html">Habilidades</a>
+        <a href="./paginas/trabajos.html">Trabajos</a>
+        <a href="./paginas/contacto.html">Contacto</a>
+        <a href="http://www.google.com/">Google</a>
+      </nav>
+
+      <!-- Delimita el contenido dinamico de nuestra pagina -->
+      <main>
+        <section class="inline">
+          <img src="./public/persona.png" title="imagen-persona" />
+          <img src="./public/codigo.png" title="imagen-codigo" />
+        </section>
+        <section class="inline">
+          <h1>Mi portafolio</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            placerat dolor eu bibendum facilisis. Nunc iaculis, neque et
+            tristique malesuada, ipsum tellus interdum diam, in auctor leo
+            mauris quis orci. Etiam quis erat vitae nunc varius viverra. Donec
+            blandit velit nec mauris eleifend mollis. Duis ultrices ut quam sit
+            amet commodo. Praesent nec mollis lorem, ac sodales lacus. Curabitur
+            imperdiet enim quis porttitor tincidunt. Fusce nec erat eget velit
+            vehicula sollicitudin. Vivamus sit amet nisl ac purus bibendum
+            molestie. Fusce ultricies sapien ac ante tincidunt, eget efficitur
+            ante fermentum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            placerat dolor eu bibendum facilisis. Nunc iaculis, neque et
+            tristique malesuada, ipsum tellus interdum diam, in auctor leo
+            mauris quis orci. Etiam quis erat vitae nunc varius viverra. Donec
+            blandit velit nec mauris eleifend mollis. Duis ultrices ut quam sit
+            amet commodo.
+          </p>
+        </section>
+        <section class="newline">
+          <a href="./paginas/trabajos.html" class="link-home"
+            >Ver mis trabajos</a
+          >
+          <a href="./paginas/habilidades.html" class="link-home"
+            >Ver mis habilidades</a
+          >
+        </section>
+      </main>
+
+      <!-- Delimita el contenido del pie de nuestra pagina -->
+      <footer>
+        <!-- h1: etiqueta para textos que representan titulos -->
+        <h1>Julia Espinoza</h1>
+        <img src="./public/persona.png" class="imagen_logo" alt="" />
+      </footer>
+
+      <script>
+        console.log("Hola mundo!");
+        var variableConVar = 1; // Pueder contexto global o un contexto local
+
+        function miFunc() {
+          var variableConVar = 2;
+          console.log("dentro", variableConVar); // 2
+        }
+        var variableConVar = 3;
+        console.log("afuera", variableConVar); // 1
+
+        // LET
+        let variableConLet = 1;
+        console.log("let 1", variableConLet);
+        function miFunc() {
+          let variableConLet = 2;
+          console.log("adentro", variableConLet); //2
+        }
+        variableConLet = 3;
+
+        // CONST
+        const variableConConst = 1; //CONSTANTE
+        console.log("const 1", variableConConst);
+        variableConConst = 3;
+        console.log("const 2", variableConConst);
+      </script>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+/* Selector de etiquetas: body, h1, p, a, etc */
+body {
+  color: white;
+}
+header,
+footer {
+  background-color: #4f5a76;
+}
+main {
+  color: #32307a;
+  margin: auto;
+  text-align: center;
+}
+/* Selector de Id: #valor_del_id o #identificador_unico_del_elemento */
+#imagen_logo {
+  border: 1px dashed green;
+}
+/* Selector de clase: .valor_del_atributo_class o .clase_del_elemento */
+.imagen_logo {
+  width: 100px;
+  border: 3px dashed red;
+}
+/* Selector de atributo */
+a[href="http://www.google.com/"]
+{
+  text-decoration: underline;
+  color: burlywood;
+}
+img[title] {
+  width: 300px;
+}
+
+/* Estilos del menu */
+nav > a {
+  color: white;
+  text-decoration: none;
+}
+nav > a:hover {
+  background-color: white;
+  color: #32307a;
+}
+nav > a:active,
+.active {
+  text-decoration: underline; /* subrayado*/
+  font-weight: bold; /* negrita */
+}
+
+/* Links home */
+.link-home {
+  background-color: #d7b356;
+  color: #32307a;
+  text-decoration: none;
+  padding: 10px 30px 10px 30px;
+}
+.inline {
+  width: 50%;
+}
+.newline {
+  width: 100%;
+}
