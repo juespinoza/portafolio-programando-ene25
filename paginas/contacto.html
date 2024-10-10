@@ -1,1 +1,78 @@
-Contacto
+<!DOCTYPE html>
+<!-- La raiz de nuestra estructura HTML -->
+<html lang="es">
+  <!-- Informacion técnica para el navegador -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Portfolio - Contacto</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+
+  <!-- Contenido de nuestra pagina -->
+  <body>
+    <!-- Delimita la seccion del encabezado de nuestra pagina -->
+    <header>
+      <!-- h1: etiqueta para textos que representan titulos -->
+      <h1>Julia Espinoza</h1>
+      <!-- <img
+        src="../public/persona.png"
+        id="imagen_logo"
+        class="imagen_logo"
+        alt=""
+      /> -->
+      <!-- nav: delimita una section de navegacion -->
+      <nav>
+        <!-- a: para crear links -->
+        <a href="../index.html">Sobre mí</a>
+        <!-- /: posicion en el carpeta principal de mi proyecto (Ruta absoluta)
+         --- ./: posicion en el carpeta en el que se encuentra mi archivo.
+         ---     Archivo actual: index.html (Ruta relativa a mi proyecto dentro
+         ---     de la carpeta portafolio)
+         --- ../: posicion de un nivel arriva del carpeta actual (Ruta relativa
+         ---      al proyecto)-->
+        <a href="./habilidades.html">Habilidades</a>
+        <a href="./trabajos.html">Trabajos</a>
+        <a href="./contacto.html" class="active">Contacto</a>
+        <a href="http://www.google.com/">Google</a>
+      </nav>
+    </header>
+
+    <!-- Delimita el contenido dinamico de nuestra pagina -->
+    <main>
+        <div class="contact-container">
+            <h3>Necesitas que te contacte?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula enim ac metus egestas ullamcorper. Etiam mattis gravida volutpat. Nullam volutpat neque in urna congue, ut tempor purus tincidunt. Donec ligula turpis, fringilla vel volutpat varius, commodo sit amet odio. </p>
+            <!-- 
+                - <form></form> 1er: Esta etiqueta delimita nuestro formulario (formulario de contacto)
+                - <label></label> 2do: titulo del dato a ingresar 
+                - <input></input> 2do: caja para ingresar de datos (textos, numeros, fecha, etc.)
+              -->
+            <form id="contact-form" class="contact-form">
+                <div >
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="contact-input" />
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="contact-input"/>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" class="contact-input" />
+                </div>
+
+                <button type="submit" id="contact-submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Delimita el contenido del pie de nuestra pagina -->
+    <footer>
+      <!-- h1: etiqueta para textos que representan titulos -->
+      <h1>Julia Espinoza</h1>
+      <img src="../public/persona.png" class="imagen_logo" alt="" />
+    </footer>
+  </body>
+</html>

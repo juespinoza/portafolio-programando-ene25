@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mí</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
 
   <!-- Contenido de nuestra pagina -->
@@ -15,12 +16,12 @@
     <header>
       <!-- h1: etiqueta para textos que representan titulos -->
       <h1>Julia Espinoza</h1>
-      <img
+      <!-- <img
         src="./public/persona.png"
         id="imagen_logo"
         class="imagen_logo"
         alt=""
-      />
+      /> -->
       <!-- nav: delimita una section de navegacion -->
       <nav>
         <!-- a: para crear links -->
@@ -39,11 +40,11 @@
 
       <!-- Delimita el contenido dinamico de nuestra pagina -->
       <main>
-        <section class="inline">
+        <div class="inline">
           <img src="./public/persona.png" title="imagen-persona" />
           <img src="./public/codigo.png" title="imagen-codigo" />
-        </section>
-        <section class="inline">
+        </div>
+        <div class="inline">
           <h1>Mi portafolio</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -65,15 +66,15 @@
             blandit velit nec mauris eleifend mollis. Duis ultrices ut quam sit
             amet commodo.
           </p>
-        </section>
-        <section class="newline">
-          <a href="./paginas/trabajos.html" class="link-home"
+        </div>
+        <div class="buttons">
+          <a href="#" class="link-home" id="trabajos"
             >Ver mis trabajos</a
           >
           <a href="./paginas/habilidades.html" class="link-home"
             >Ver mis habilidades</a
           >
-        </section>
+        </div>
       </main>
 
       <!-- Delimita el contenido del pie de nuestra pagina -->
@@ -84,30 +85,121 @@
       </footer>
 
       <script>
-        console.log("Hola mundo!");
-        var variableConVar = 1; // Pueder contexto global o un contexto local
+        // window.alert("desde etiqueta script");
+        // console.log("Hola mundo!");
 
-        function miFunc() {
-          var variableConVar = 2;
-          console.log("dentro", variableConVar); // 2
-        }
-        var variableConVar = 3;
-        console.log("afuera", variableConVar); // 1
+        // VAR
+        // declarar variable >> var variableConVar;
+        // inicializar variable >> variableConVar = 1:
+        // declarar e inicializar variable >> var variableConVar = 1;
+        // var variableConVar = 1; // Pueder contexto global o un contexto local
 
-        // LET
-        let variableConLet = 1;
-        console.log("let 1", variableConLet);
-        function miFunc() {
-          let variableConLet = 2;
-          console.log("adentro", variableConLet); //2
-        }
-        variableConLet = 3;
+        // function miFunc() {
+        //   var variableConVar = 2;
+        //   console.log("dentro:", variableConVar); // 2
 
-        // CONST
-        const variableConConst = 1; //CONSTANTE
-        console.log("const 1", variableConConst);
-        variableConConst = 3;
-        console.log("const 2", variableConConst);
+        //   var variableConVar = 10;
+        //   console.log("dentro 2", variableConVar);
+        // }
+
+        // var variableConVar = 3;
+        // console.log("afuera", variableConVar); // 3
+        // miFunc();
+
+        // // LET
+        // let variableConLet = 1;
+        // console.log("inicio", variableConLet);
+
+        // function miFunc() {
+        //   let variableConLet = 2;
+        //   console.log("adentro: ", variableConLet); //2
+        // }
+        // // variableConLet = 3;
+        // miFunc();
+        // console.log("fuera: ", variableConLet);
+
+        // // CONST
+        // const variableConConst = 1; // VARIABLE CONSTANTE
+        // console.log("inicio", variableConConst);
+
+        // function myFunc() {
+        //   const variableConConst = 2;
+        //   console.log("dentro: ", variableConConst);
+        // }
+        // myFunc();
+        // // const variableConConst = 3; // NO SE PUEDE
+        // // variableConConst = 3; // NO SE PUEDE
+        // console.log("fuera: ", variableConConst);
+
+        // OPERADORES para valores numericos
+        // let valor1 = 1;
+        // let valor2 = 2;
+        // console.log("suma: ", valor1 + valor2);
+        // console.log("resta: ", valor2 - valor1);
+        // console.log("multiplicacion: ", valor1 * valor2);
+        // console.log("division: ", valor1 / valor2);
+        // console.log("resto: ", valor1 % valor2);
+
+        // OPERADOR + concatenar cadenas
+        // let texto1 = "1";
+        // let texto2 = "2";
+        // console.log("concatenamos:", texto1 + texto2);
+
+        // Template literals
+        // let texto1 = "hola";
+        // let texto2 = "Juan";
+        // console.log(
+        //   `cualquier texto junto con una variable igual a ${texto1 + texto2}`
+        // );
+        // console.log(texto1 + ", " + texto2);
+        // console.log(`${texto1}, ${texto2}`);
+
+        // OPERADORES de comparacion
+        // valor1 > valor2: valor1 es mayor a valor2?; Resultado booleano (true / false)
+        // < menor a,
+        // >= mayor O igual a,
+        // <= menor O igual a,
+        // === es igual (modo estricto)
+        // !== es distinto (modo estricto)
+        // let var1 = 1;
+        // let var2 = 2;
+        // let var3 = 2;
+        // console.log(var3 !== var2); //
+
+        // OPERADORES LOGICOS
+        // >=  (es mayor) || (es igual)
+        // TABLA de AND (&&): ambos valores tienen que ser V para que el resultado sea V.
+        // V && F = F
+        // F && V = F
+        // F && F = F
+        // V && V = V
+        // TABLA de OR (||): uno de los valores tiene que ser V para que el resultado sea V.
+        // V || F = V
+        // F || V = V
+        // F || F = F
+        // V || V = V
+        // TABLA de NOT (!): valor inverso del valor booleano.
+        // !V = F
+        // !F = V
+        // let cond1 = 5 > 6; // FALSE
+        // let cond2 = 5 === 5; // VERDADERA
+        // let cond3 = 6 > 5; // VERDADERA
+        // let cond4 = true;
+        // if (cond1 && (cond2 || cond3 || cond4)) {
+        //   // bloque de la resultante verdadera
+        //   console.log("condicion verdadera");
+        // } else {
+        //   // bloque de la resultante falsa
+        //   console.log("condicion falsa");
+        // }
+        // switch (cond1) {
+        //   case true:
+        //     console.log("true");
+        //   case false:
+        //     console.log("false");
+        // }
+
+        // const nombres = ["Juan", "Maria"]; // indices: 0 y 1
       </script>
     </header>
   </body>

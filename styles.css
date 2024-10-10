@@ -1,16 +1,69 @@
 /* Selector de etiquetas: body, h1, p, a, etc */
 body {
   color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 header,
 footer {
+  display: flex;
+  justify-content: space-between;
   background-color: #4f5a76;
+  color: white;
+  padding: 20px;
 }
+header h1 {
+  margin: 0;
+}
+/* Estilos del menu */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  font-weight: bold;
+}
+nav a.active {
+  border-bottom: 3px solid white;
+}
+
 main {
   color: #32307a;
   margin: auto;
   text-align: center;
+  padding: 40px;
+  background-color: #f3f4f6;
 }
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+}
+.content .text {
+  flex: 1;
+  padding: 20px;
+}
+.content .text p {
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 /* Selector de Id: #valor_del_id o #identificador_unico_del_elemento */
 #imagen_logo {
   border: 1px dashed green;
@@ -30,21 +83,6 @@ img[title] {
   width: 300px;
 }
 
-/* Estilos del menu */
-nav > a {
-  color: white;
-  text-decoration: none;
-}
-nav > a:hover {
-  background-color: white;
-  color: #32307a;
-}
-nav > a:active,
-.active {
-  text-decoration: underline; /* subrayado*/
-  font-weight: bold; /* negrita */
-}
-
 /* Links home */
 .link-home {
   background-color: #d7b356;
@@ -52,9 +90,14 @@ nav > a:active,
   text-decoration: none;
   padding: 10px 30px 10px 30px;
 }
-.inline {
-  width: 50%;
+
+/* Estilo en Pagina Contacto */
+.contact-form {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
-.newline {
-  width: 100%;
+.contact-input {
+  margin: 10px 0px;
 }
