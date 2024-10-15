@@ -53,54 +53,72 @@ if (submitButton) {
   submitButton.addEventListener("click", submitContactEvent);
 }
 
-// Ejemplo de Objeto en JS:
-// declaracion + inicializacion
-const gato = {
-  nombre: "Luna",
-  raza: "mestizo",
-  color: "blanco y marron",
-  peso: 2.5,
-  jugueteFav: "raton de plastico",
-  maullar: function () {
-    console.log("miiiiiau");
-  },
-  jugarConJugueteFav: function () {
-    console.log(
-      `${this.nombre} esta jugando con su juguete favorito, ${this.jugueteFav}`
-    );
-  },
-};
+// // Ejemplo de Objeto en JS:
+// // declaracion + inicializacion
+// const gato = {
+//   nombre: "Luna",
+//   raza: "mestizo",
+//   color: "blanco y marron",
+//   peso: 2.5,
+//   jugueteFav: "raton de plastico",
+//   maullar: function () {
+//     console.log("miiiiiau");
+//   },
+//   jugarConJugueteFav: function () {
+//     console.log(
+//       `${this.nombre} esta jugando con su juguete favorito, ${this.jugueteFav}`
+//     );
+//   },
+// };
 
-// acceso a las propiedades de mi objeto
-// console.log("Nombre", gato.nombre);
-// console.log("Peso", gato.peso);
-// console.log("Raza", gato["raza"]);
-// // acceso a los métodos de mi objeto
-// console.log(">>", gato.jugarConJugueteFav());
+// // acceso a las propiedades de mi objeto
+// // console.log("Nombre", gato.nombre);
+// // console.log("Peso", gato.peso);
+// // console.log("Raza", gato["raza"]);
+// // // acceso a los métodos de mi objeto
+// // console.log(">>", gato.jugarConJugueteFav());
 
-// Clase
-class Persona {
-    constructor(nombre, apellido, edad = 0) {
-      this.nombre = nombre;
-      this.apellido = apellido;
-      this.edad = edad;
-    }
+// // Clase
+// class Persona {
+//     constructor(nombre, apellido, edad = 0) {
+//       this.nombre = nombre;
+//       this.apellido = apellido;
+//       this.edad = edad;
+//     }
 
-  nombreCompleto() {
-    return this.nombre + " " + this.apellido;
-  }
+//   nombreCompleto() {
+//     return this.nombre + " " + this.apellido;
+//   }
 
-  saludar() {
-    console.log(`Hola, me llamo ${this.nombreCompleto()}...`);
-  }
-}
+//   saludar() {
+//     console.log(`Hola, me llamo ${this.nombreCompleto()}...`);
+//   }
+// }
 
-// Crear una Persona es crear una instancia de la clase Persona, objeto de la clase Persona.
-let eduardo = new Persona();
-eduardo.nombre = "Eduardo";
-eduardo.apellido = "Apellido";
-console.log("Nombre completo: ", eduardo.nombreCompleto());
-console.log("Edad: ", eduardo.edad);
-console.log(">> ", eduardo.saludar());
-eduardo.edad = 20;
-console.log("Edad: ", eduardo.edad);
+// // Crear una Persona es crear una instancia de la clase Persona, objeto de la clase Persona.
+// let eduardo = new Persona();
+// eduardo.nombre = "Eduardo";
+// eduardo.apellido = "Apellido";
+// console.log("Nombre completo: ", eduardo.nombreCompleto());
+// console.log("Edad: ", eduardo.edad);
+// console.log(">> ", eduardo.saludar());
+// eduardo.edad = 20;
+// console.log("Edad: ", eduardo.edad);
+
+// // setTimeout
+// // operaciones sincronicas
+// console.log("inicio", new Date());
+// // operacion Asincronica: setTimeout(funcionCallback, milisegundos)
+// setTimeout(() => console.log("medio 1", new Date()), 5000);
+// setTimeout(() => setTimeout(console.log("medio 2", new Date()), 6000), 3000);
+// setTimeout(() => console.log("medio 3", new Date()), 10000);
+// // operacion sincronica
+// console.log("fin", new Date());
+
+// fetch
+console.log("inicio", new Date());
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => response.json())
+  .then((data) => console.log(data, new Date()))
+  .catch((error) => console.log(error, new Date()));
+console.log("fin", new Date());
