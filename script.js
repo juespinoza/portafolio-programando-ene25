@@ -116,9 +116,40 @@ if (submitButton) {
 // console.log("fin", new Date());
 
 // fetch
-console.log("inicio", new Date());
-fetch("https://jsonplaceholder.typicode.com/posts/1")
-  .then((response) => response.json())
-  .then((data) => console.log(data, new Date()))
-  .catch((error) => console.log(error, new Date()));
-console.log("fin", new Date());
+// console.log("inicio", new Date());
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data, new Date()))
+//   .catch((error) => console.log(error, new Date()));
+// console.log("fin", new Date());
+
+const miPromesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const result = "Hola";
+    if (result) {
+      resolve({ msg: "Resuelto", data: result });
+    } else {
+      reject("Rechazado");
+    }
+  }, 3000);
+});
+
+// console.log("miPromesa", miPromesa);
+// miPromesa
+//   .then((respuesta) => {
+//     console.log(
+//       `La data de mi promesa es ${respuesta.data}. Y el mensaje de resolucion fue: ${respuesta.msg}`
+//     );
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+// async function manejarMyPromesa() {
+//   try {
+//     const respuesta = await miPromesa;
+//     console.log("respuesta:", respuesta);
+//   } catch (error) {
+//     console.log("error:", error);
+//   }
+// }
+// manejarMyPromesa();
