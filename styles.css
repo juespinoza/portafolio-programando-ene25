@@ -64,6 +64,10 @@ main {
   margin-top: 30px;
 }
 
+.buttons a {
+  margin: 10px;
+}
+
 /* Selector de Id: #valor_del_id o #identificador_unico_del_elemento */
 #imagen_logo {
   border: 1px dashed green;
